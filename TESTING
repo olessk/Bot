@@ -7,8 +7,8 @@ def handle_command(slack_api, command, channel):
 	else resends clarification
 	"""
 	EXAMPLE_COMMAND = 'do'
-	if command.lower().startswith(EXAMPLE_COMMAND) or command.lower().startswith('what'):
-		slack_api.rtm_send_message(channel, 'Yes, code me further to do that!')
+	if command.lower().startswith(EXAMPLE_COMMAND) or command.lower().startswith('что'):
+		slack_api.rtm_send_message(channel, 'Да, кодируйте меня дальше, чтобы сделать это!')
 	elif command.lower().startswith('дарова') or command.lower().startswith('Эй') or command.lower().startswith('привет') or command.lower().startswith('кто ты'):
 		slack_api.rtm_send_message(channel, 'Эй, Я\ твой slack bot, Как я могу помоч тебе?')
 	else:
